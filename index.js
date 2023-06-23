@@ -85,11 +85,8 @@ search.addEventListener("click", () => { // fetching weather information
         response.json().then((data) => {
             getData(data)
         })
-            .catch((data) => { window.location.href = "./error.html" }) // invalid city or country
-    }).catch((data) => {
-        window.location.href = "./404.html"
-        // console.log(page.pathname);
-    }) // no internet connection
+            .catch((data) => { window.location.href = "./404.html" }) // invalid city or country
+    })
 })
 
 
