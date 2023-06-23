@@ -18,7 +18,7 @@ let search = document.getElementById("search");
 
 
 function getData(data) {
-    console.log(data)
+
     let temperatur = document.getElementById("temperature");
     temperatur.innerText = Math.round(data.main.temp - 273);
     let description = document.getElementById("description");
@@ -54,7 +54,6 @@ function getData(data) {
     let d = new Date();
     let pl = d.getTime() + d.getTimezoneOffset() + data.timezone
     let nd = new Date(pl);
-    console.log(nd)
     loc_date.innerText = nd.toDateString();
     loc_time.innerText = nd.toLocaleString().split(',')[1];
 }
